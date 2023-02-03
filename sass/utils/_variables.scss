@@ -1,0 +1,23 @@
+$colour-primary: #9356dc;
+$colour-secondary: #ff79da;
+$colour-tertiary: #99e2d0;
+
+$colour-accent: #d6fff5;
+$colour-white: #fff;
+$colour-invalid: #db464b;
+
+$txt-input-palette: (
+    active: (bg: $colour-primary,
+        border: $colour-primary,
+        txt: $colour-white,
+
+    ),
+    focus: (bg: $colour-primary,
+        border: $colour-primary,
+        txt: $colour-white,
+    ),
+    invalid: (bg: $colour-invalid,
+        border: $colour-white,
+        txt: $colour-white,
+    )
+);

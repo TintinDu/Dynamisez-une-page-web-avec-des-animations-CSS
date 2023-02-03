@@ -1,0 +1,11 @@
+@mixin txt-input-palette($palettes) {
+
+    @each $state,
+    $palette in $palettes {
+        &:#{$state} {
+            border: .1rem solid map-get($palette, border);
+            background-color: map-get($palette, bg);
+            color: map-get($palette, txt);
+        }
+    }
+}
