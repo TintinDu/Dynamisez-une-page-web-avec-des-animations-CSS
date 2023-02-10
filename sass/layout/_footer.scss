@@ -1,4 +1,28 @@
-footer {
-    background-color: $colour-black;
-    color: $colour-white;
+.footer {
+  padding: 15px;
+  background-color: $colour-black-footer;
+  color: $colour-white;
+
+  // &__title {
+  //
+  // }
+
+  &__logo {
+    width: 6rem;
+    filter: brightness(0) invert(1);
+    padding: 5px;
+  }
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  &__link {
+    display: flex;
+    padding: 5px;
+  }
+  &__icon {
+    width: 25px;
+  }
 }

@@ -1,7 +1,165 @@
 .container {
-    margin: 10 0;
+  // margin: 10 0;
+  width: 100%;
 }
 
-aside {
-    background-color: $colour-white;
+.location {
+  display: flex;
+  justify-content: center;
+  background-color: $colour-grey;
+  padding: 15px 0;
+  box-shadow: 0px -1px 1px $colour-dark-grey;
+
+  &__item {
+    background-color: $colour-grey;
+
+    &--margin {
+      margin: 0 10px;
+    }
+  }
+}
+
+.reservation {
+  text-align: center;
+  padding: 10px;
+  margin: 25px;
+  margin-bottom: 35px;
+
+  &__title {
+    font-weight: 600;
+    margin: 0 10px;
+  }
+
+  // &__item {
+  //   margin: 5px;
+  // }
+
+  &__text {
+    color: $colour-dark-grey;
+    font-weight: 100;
+    margin: 10px 10px 30px;
+  }
+
+  &__btn {
+    background: linear-gradient($colour-secondary, $colour-primary);
+    padding: 15px;
+    font-size: 1rem;
+    border: transparent;
+    box-shadow: 10px 5px 5px $colour-grey;
+  }
+}
+
+.functioning {
+  background-color: $colour-white;
+  position: relative;
+  margin: 10px 0;
+  margin-bottom: 20px;
+  padding: 10px 0;
+
+  &__title {
+    margin: 15px;
+    padding: 20px 0 10px;
+  }
+}
+
+.card {
+  width: 100%;
+
+  :hover {
+    background-color: $colour-primary;
+  }
+
+  &__number {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 22px;
+    padding-top: 3px;
+    border-radius: 15px;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    background-color: $colour-primary;
+    color: $colour-white;
+  }
+
+  &__row {
+    font-weight: 500;
+    padding: 25px 30px;
+    margin: 15px;
+    border-radius: 15px;
+    background-color: $colour-lightgrey;
+    font-size: 1rem;
+    display: flex;
+    color: $colour-black;
+    box-shadow: 10px 5px 5px $colour-grey;
+  }
+
+  &__icon {
+    margin-top: 1px;
+  }
+
+  &__text {
+    margin-left: 20px;
+  }
+}
+
+.restaurants {
+  margin: 10px 0;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &__title {
+    font-weight: 600;
+    margin: 0 20px;
+  }
+}
+
+.restaurant {
+  border-radius: 15px;
+  background-color: #ffffff;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 5px 1px #00000014;
+  width: 90%;
+
+  &__frame {
+    display: flex;
+    justify-content: center;
+    height: 140px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    padding: 10px 15px 5px;
+  }
+
+  &__location {
+    padding: 0px 15px 5px;
+  }
+
+  &__heart {
+    margin: 20px 20px 0 0;
+
+    // &--filled {
+
+    // }
+
+    :hover {
+      color: $colour-primary;
+    }
+  }
 }
