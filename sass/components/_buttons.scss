@@ -1,0 +1,13 @@
+.btn {
+    @include btn
+}
+
+.btn-primary {
+    width: 60%;
+    color: $colour-white;
+    background: $colour-primary;
+}
+
+.function__btn {
+    width: 80%;
+}

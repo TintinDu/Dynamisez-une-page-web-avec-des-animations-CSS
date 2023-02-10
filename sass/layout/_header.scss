@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $colour-white;
+}
+
+.header {
+
+    align-items: center;
+
+    &__logo>img {
+        width: 20rem;
+    }
+}

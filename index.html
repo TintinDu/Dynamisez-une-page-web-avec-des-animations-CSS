@@ -1,22 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Booki</title>
-    <link rel="stylesheet" href="./stylesheets/style.scss" />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script
-      src="https://kit.fontawesome.com/feb2d11d30.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <h1><img src="./public/images/logo/ohmyfood.png" alt="Logo ohmyfood" /></h1>
 
-    <p>My first paragraph.</p>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ohmyfood</title>
+  <link rel="stylesheet" href="/public/css/style.css" />
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://kit.fontawesome.com/feb2d11d30.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <h1 class="nav__logo">
+        <img src="./public/images/logo/ohmyfood.png" alt="logo ohmyfood" />
+      </h1>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="location">
+      <div class="location__item">
+        <i class="fa-solid fa-location-dot"></i>
+        <p class="location__title">"Paris, Belleville"</p>
+      </div>
+    </section>
+
+    <section class="reservation">
+      <h2 class="restaurant__title">Réservez le menu qui vous convient</h2>
+      <p class="reservation__text">
+        Découvrez des restaurants d'exception, sélectionnés par nos soins.
+      </p>
+      <a href="#" class="btn reservation__btn btn-primary"> Explorer nos restaurants </a>
+    </section>
+    <section class="functioning">
+      <h2 class="functioning__title">Fonctionnement</h2>
+      <a href="#">
+        <button class="btn functioning__btn">Choisissez un restaurant</button>
+      </a>
+      <a href="#">
+        <button class="btn functioning__btn">Composez votre menu</button>
+      </a>
+      <a href="#">
+        <button class="btn functioning__btn">Dégustez au restaurant</button>
+      </a>
+    </section>
+
+    <section class="cards">
+      <h2 class="cards__title">Restaurants</h2>
+      <article class="restaurant">
+        <h4 class="restaurant__title">La palette du goût</h4>
+        <p class="restaurant__location">Ménilmontant</p>
+      </article>
+      <article class="restaurant">
+        <h4 class="restaurant__title">La note enchantée</h4>
+        <p class="restaurant__location">Charonne</p>
+      </article>
+      <article class="restaurant">
+        <h4 class="restaurant__title">À la française</h4>
+        <p class="restaurant__location">Cité Rouge</p>
+      </article>
+      <article class="restaurant">
+        <h4 class="restaurant__title">Le délice des sens</h4>
+        <p class="restaurant__location">Folie-Méricourt</p>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <h2 class="footer__title">
+      <img src="./public/images/logo/ohmyfood.png" alt="logo ohmyfood petit" class="footer__logo" />
+    </h2>
+    <ul class="footer__list">
+      <li class="footer__link">Proposer un restaurant</li>
+      <li class="footer__link">Devenir partenaire</li>
+      <li class="footer__link">Mentions légales</li>
+      <li class="footer__link">Contact</li>
+    </ul>
+  </footer>
+</body>
+
 </html>

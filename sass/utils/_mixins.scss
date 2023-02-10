@@ -1,11 +1,14 @@
-@mixin txt-input-palette($palettes) {
+@mixin border($colour: $colour-primary) {
+    border: .1rem solid transparent;
+    border-radius: 30px;
+}
 
-    @each $state,
-    $palette in $palettes {
-        &:#{$state} {
-            border: .1rem solid map-get($palette, border);
-            background-color: map-get($palette, bg);
-            color: map-get($palette, txt);
-        }
-    }
+
+@mixin btn {
+    @include border;
+    cursor: pointer;
+    align-items: center;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
 }

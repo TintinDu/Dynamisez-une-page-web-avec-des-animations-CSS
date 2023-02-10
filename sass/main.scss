@@ -1,27 +1,15 @@
-@import "./utils/index";
-@import "./base/index";
-@import "./components/index";
-@import "./layout/index";
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
 
-// Ordre d'import
-// Utils :
+@import "./base/base";
+@import "./base/typography";
 
-// Variables.
+@import "./components/buttons";
 
-// Fonctions.
-
-// Mixins.
-
-// Placeholders.
-
-// Feuilles de style de tiers (vendors) (si vous en avez).
-
-// Base.
-
-// Composants.
-
-// Layout.
-
-// Pages.
-
-// Thèmes.
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form";
+@import "./layout/footer";
