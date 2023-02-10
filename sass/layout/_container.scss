@@ -58,13 +58,16 @@
 
   &__title {
     margin: 15px;
-    padding: 20px 0 10px;
+    padding: 15px 0 10px;
+  }
+
+  &__cards {
+    margin: 15px;
   }
 }
 
 .card {
-  width: 100%;
-
+  width: 90%;
   :hover {
     background-color: $colour-primary;
   }
@@ -96,6 +99,10 @@
 
   &__icon {
     margin-top: 1px;
+    color: $colour-dark-grey;
+    :hover {
+      color: $colour-primary;
+    }
   }
 
   &__text {
@@ -124,7 +131,6 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 5px 5px 1px #00000014;
-  width: 90%;
 
   &__frame {
     display: flex;
