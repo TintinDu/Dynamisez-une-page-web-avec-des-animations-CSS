@@ -1,14 +1,16 @@
 .container {
-  // margin: 10 0;
   width: 100%;
 }
 
 .location {
-  display: flex;
-  justify-content: center;
-  background-color: $colour-grey;
-  padding: 15px 0;
-  box-shadow: 0px -1px 1px $colour-dark-grey;
+  padding: 5px 0 0 0;
+  &__container {
+    background-color: $colour-grey;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 
   &__item {
     background-color: $colour-grey;
@@ -45,7 +47,7 @@
     padding: 15px;
     font-size: 1rem;
     border: transparent;
-    box-shadow: 10px 5px 5px $colour-grey;
+    @include boxing-shadow;
   }
 }
 
@@ -69,7 +71,10 @@
 .card {
   width: 90%;
   :hover {
-    background-color: $colour-primary;
+    background-color: pastel($colour-primary);
+    .card__icon {
+      color: $colour-primary;
+    }
   }
 
   &__number {
@@ -94,15 +99,12 @@
     font-size: 1rem;
     display: flex;
     color: $colour-black;
-    box-shadow: 10px 5px 5px $colour-grey;
+    @include boxing-shadow;
   }
 
   &__icon {
     margin-top: 1px;
     color: $colour-dark-grey;
-    :hover {
-      color: $colour-primary;
-    }
   }
 
   &__text {
@@ -135,12 +137,13 @@
   &__frame {
     display: flex;
     justify-content: center;
-    height: 140px;
+    height: 200px;
   }
 
   &__container {
     display: flex;
     justify-content: space-between;
+    padding: 5px 0;
   }
 
   &__image {
@@ -159,13 +162,12 @@
 
   &__heart {
     margin: 20px 20px 0 0;
-
-    // &--filled {
-
-    // }
-
-    :hover {
-      color: $colour-primary;
-    }
+    color: $colour-dark-grey;
+    cursor: pointer;
   }
+}
+
+.restaurant__heart:hover {
+  color: $colour-primary;
+  transition: 0.5s ease-out;
 }
