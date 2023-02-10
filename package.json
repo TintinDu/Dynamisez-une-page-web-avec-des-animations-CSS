@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TintinDu/Dynamisez-une-page-web-avec-des-animations-CSS#readme",
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "prettier": "^2.8.4"
   }
 }

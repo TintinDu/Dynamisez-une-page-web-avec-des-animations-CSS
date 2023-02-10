@@ -1,33 +1,15 @@
 .nav {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin: 10 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 10 0;
 
-    &__item {
-        margin: 5px;
-        text-align: center;
-        padding: 10px;
+  &__title {
+    font-size: 3rem;
+    margin-top: 5px;
+  }
 
-        &--background {
-            background-color: $colour-grey;
-            width: 100%;
-        }
-
-        & input {
-            // CLASSE !!!
-            background-color: $colour-grey;
-            border: solid $colour-grey 1px;
-            font-size: 1rem;
-            color: black;
-            // CLASSE
-
-            // :focus {
-            //     border: solid $colour-grey 1px;
-            // }
-
-        }
-
-    }
-
+  &__logo {
+    width: 14rem;
+  }
 }

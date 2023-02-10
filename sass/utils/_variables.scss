@@ -2,25 +2,28 @@ $colour-primary: #9356dc;
 $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
 
-$colour-accent: #d6fff5;
+$colour-dark-grey: #999999;
 $colour-white: #fff;
-$colour-grey: #EBEBEB;
-$colour-lightgrey: #F7F7F7;
+$colour-grey: #ebebeb;
+$colour-lightgrey: #f7f7f7;
 $colour-invalid: #db464b;
+$colour-black-footer: #323232;
 $colour-black: black;
 
 $txt-input-palette: (
-    active: (bg: $colour-primary,
-        border: $colour-primary,
-        txt: $colour-white,
-
-    ),
-    focus: (bg: $colour-primary,
-        border: $colour-primary,
-        txt: $colour-white,
-    ),
-    invalid: (bg: $colour-invalid,
-        border: $colour-white,
-        txt: $colour-white,
-    )
+  active: (
+    bg: $colour-primary,
+    border: $colour-primary,
+    txt: $colour-white,
+  ),
+  focus: (
+    bg: $colour-primary,
+    border: $colour-primary,
+    txt: $colour-white,
+  ),
+  invalid: (
+    bg: $colour-invalid,
+    border: $colour-white,
+    txt: $colour-white,
+  ),
 );
