@@ -15,18 +15,16 @@
 
 <body>
   <header class="header">
-    <nav class="nav">
-      <h1 class="nav__title">
-        <img src="./public/images/logo/ohmyfood.png" alt="logo ohmyfood" class="nav__logo" />
-      </h1>
-    </nav>
+    <h1 class="header__title">
+      <img src="./public/images/logo/ohmyfood.png" alt="logo ohmyfood" class="header__logo" />
+    </h1>
   </header>
 
   <main class="container">
     <section class="location">
       <div class="location__container">
         <i class="location__item fa-solid fa-location-dot"></i>
-        <p class="location__item location__item--margin">Paris, Belleville</p>
+        <h2 class="location__title location__item location__item--margin">Paris, Belleville</h2>
       </div>
     </section>
 
@@ -43,27 +41,27 @@
 
       <div class="functioning__cards">
 
-        <a href="#" class="card">
+        <a href="#" class="card card--pinky">
           <p class="card__number">1</p>
-          <div class="card__row">
+          <div class="card__row card__row--paddy">
             <i class="card__icon fa-solid fa-mobile-screen-button"></i>
-            <p class="card__text">Choisissez un restaurant</p>
+            <p class="card__text card__text--margin-left">Choisissez un restaurant</p>
           </div>
         </a>
 
-        <a href="#" class="card">
+        <a href="#" class="card card--pinky">
           <p class="card__number">2</p>
-          <div class="card__row">
+          <div class="card__row card__row--paddy">
             <i class="card__icon fa-solid fa-list-ul"></i>
-            <p class="card__text">Composez votre menu</p>
+            <p class="card__text card__text--margin-left">Composez votre menu</p>
           </div>
         </a>
 
-        <a href="#" class="card">
+        <a href="#" class="card card--pinky">
           <p class="card__number">3</p>
-          <div class="card__row">
+          <div class="card__row card__row--paddy">
             <i class="card__icon fa-solid fa-store"></i>
-            <p class="card__text">Dégustez au restaurant</p>
+            <p class="card__text card__text--margin-left">Dégustez au restaurant</p>
           </div>
         </a>
 
@@ -78,14 +76,14 @@
       <article class="restaurant">
         <div class="restaurant__frame">
           <img src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""
-            class="restaurant__image">
+            class="restaurant__image restaurant__image--new">
         </div>
         <div class="restaurant__container">
           <div class="restaurant__informations">
-            <h4 class="restaurant__title">La palette du goût</h4>
+            <h3 class="restaurant__title">La palette du goût</h3>
             <p class="restaurant__location">Ménilmontant</p>
           </div>
-          <i class="restaurant__heart restaurant__heart--filled fa-solid fa-heart"></i>
+          <i class="heart restaurant__heart restaurant__heart--filled fa-solid fa-heart"></i>
         </div>
       </article>
 
@@ -95,23 +93,24 @@
         </div>
         <div class="restaurant__container">
           <div class="restaurant__informations">
-            <h4 class="restaurant__title">La note enchantée</h4>
+            <h3 class="restaurant__title">La note enchantée</h3>
             <p class="restaurant__location">Charonne</p>
           </div>
-          <i class="restaurant__heart restaurant__heart--filled fa-regular fa-heart"></i>
+          <i class="heart restaurant__heart restaurant__heart--filled fa-regular fa-heart"></i>
         </div>
       </article>
 
+
       <article class="restaurant">
-        <div class="restaurant__frame">
+        <a class="restaurant__frame" href="/menu.html">
           <img src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" class="restaurant__image">
-        </div>
+        </a>
         <div class="restaurant__container">
           <div class="restaurant__informations">
-            <h4 class="restaurant__title">À la française</h4>
+            <h3 class="restaurant__title">À la française</h3>
             <p class="restaurant__location">Cité Rouge</p>
           </div>
-          <i class="restaurant__heart restaurant__heart--filled fa-regular fa-heart"></i>
+          <i class="heart restaurant__heart restaurant__heart--filled fa-regular fa-heart"></i>
         </div>
       </article>
 
@@ -122,10 +121,10 @@
         </div>
         <div class="restaurant__container">
           <div class="restaurant__informations">
-            <h4 class="restaurant__title">Le délice des sens</h4>
+            <h3 class="restaurant__title">Le délice des sens</h3>
             <p class="restaurant__location">Folie-Méricourt</p>
           </div>
-          <i class="restaurant__heart restaurant__heart--filled fa-regular fa-heart"></i>
+          <i class="heart restaurant__heart restaurant__heart--filled fa-regular fa-heart"></i>
         </div>
       </article>
 
