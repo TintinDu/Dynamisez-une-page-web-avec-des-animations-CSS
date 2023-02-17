@@ -1,5 +1,23 @@
 .container {
   width: 100%;
+  padding-bottom: 20px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px 15px 0 0;
+    background-color: $colour-grey;
+    padding: 15px;
+    align-items: center;
+    font-family: "Shrikhand", cursive;
+  }
+
+  &--darker {
+    background-color: $colour-grey;
+  }
+
+  // &__heart {
+  // }
 }
 
 .location {
@@ -18,6 +36,12 @@
     &--margin {
       margin: 0 10px;
     }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 1rem;
+    color: lighten($colour-black, 20%);
   }
 }
 
@@ -42,13 +66,8 @@
     margin: 10px 10px 30px;
   }
 
-  &__btn {
-    background: linear-gradient($colour-secondary, $colour-primary);
-    padding: 15px;
-    font-size: 1rem;
-    border: transparent;
-    @include boxing-shadow;
-  }
+  // &__btn {
+  // }
 }
 
 .functioning {
@@ -70,10 +89,13 @@
 
 .card {
   width: 90%;
-  :hover {
-    background-color: pastel($colour-primary);
-    .card__icon {
-      color: $colour-primary;
+
+  &--pinky {
+    :hover {
+      background-color: pastel($colour-primary);
+      .card__icon {
+        color: $colour-primary;
+      }
     }
   }
 
@@ -90,16 +112,29 @@
     color: $colour-white;
   }
 
+  &__column {
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+  }
+
   &__row {
     font-weight: 500;
-    padding: 25px 30px;
-    margin: 15px;
+    margin: 10px auto;
     border-radius: 15px;
     background-color: $colour-lightgrey;
     font-size: 1rem;
     display: flex;
     color: $colour-black;
     @include boxing-shadow;
+    &--spaced {
+      padding: 15px;
+      justify-content: space-between;
+    }
+    &--paddy {
+      margin: 15px;
+      padding: 25px 30px;
+    }
   }
 
   &__icon {
@@ -107,8 +142,20 @@
     color: $colour-dark-grey;
   }
 
+  // &__title {
+  // }
+
   &__text {
-    margin-left: 20px;
+    &--margin-left {
+      margin-left: 20px;
+    }
+    &--thin {
+      font-weight: 200;
+    }
+  }
+
+  &__price {
+    padding-top: 20px;
   }
 }
 
@@ -150,6 +197,11 @@
     border-radius: 15px 15px 0 0;
     width: 100%;
     object-fit: cover;
+    &--new {
+      content: "nouveau";
+      color: red;
+      // voir vidéos Teams
+    }
   }
 
   &__title {
@@ -162,8 +214,6 @@
 
   &__heart {
     margin: 20px 20px 0 0;
-    color: $colour-dark-grey;
-    cursor: pointer;
   }
 }
 
@@ -171,3 +221,25 @@
   color: $colour-primary;
   transition: 0.5s ease-out;
 }
+
+.meal {
+  padding: 10px;
+  &__title {
+    margin-left: 2px;
+    font-weight: 300;
+    border-bottom: solid $colour-tertiary 3px;
+    padding-bottom: 5px;
+    width: 40px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    &--center {
+      width: 180px;
+    }
+  }
+}
+
+// regarder Slack OC + discord pour SVG coeur
