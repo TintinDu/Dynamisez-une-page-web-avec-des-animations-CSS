@@ -10,20 +10,7 @@ $colour-invalid: #db464b;
 $colour-black-footer: #323232;
 $colour-black: black;
 
-$txt-input-palette: (
-  active: (
-    bg: $colour-primary,
-    border: $colour-primary,
-    txt: $colour-white,
-  ),
-  focus: (
-    bg: $colour-primary,
-    border: $colour-primary,
-    txt: $colour-white,
-  ),
-  invalid: (
-    bg: $colour-invalid,
-    border: $colour-white,
-    txt: $colour-white,
-  ),
-);
+$size: 5vh;
+$anim-duration: 800ms;
+$num-balls: 5;
+$anim-delay: calc($anim-duration / $num-balls);

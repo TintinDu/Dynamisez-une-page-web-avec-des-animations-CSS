@@ -1,0 +1,62 @@
+.wrapper {
+  display: flex;
+  width: 100vw;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: white;
+  z-index: 2;
+}
+
+.loader {
+  // margin: 1em 0;
+  opacity: 1;
+  // passer opacité à 0 avec transform / transition
+  display: flex;
+  justify-content: space-evenly;
+
+  &--1 {
+    margin-top: 40vh;
+  }
+
+  &__spinner {
+    height: $size * 1.5;
+    width: $size * 1.5;
+    background: linear-gradient($colour-primary, $colour-secondary);
+    border-radius: 50%;
+    animation: balls $anim-duration backwards infinite ease-in-out alternate
+      running;
+    @for $i from 1 through $num-balls {
+      &--#{$i} {
+        animation-delay: $anim-delay * $i;
+      }
+      &--#{$i}-inv {
+        animation-delay: $anim-delay * $i + random(100) * 15ms;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+        background: linear-gradient($colour-secondary, $colour-primary);
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+    }
+  }
+}
+
+.under {
+  z-index: 1;
+  margin-left: -200%;
+}
+
+@keyframes balls {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
