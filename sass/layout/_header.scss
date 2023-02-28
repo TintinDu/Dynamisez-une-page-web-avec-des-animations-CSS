@@ -3,7 +3,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  // margin: 0 0 50px;
   box-shadow: 0px 1px 10px #999;
 
   &__title {
@@ -12,21 +11,12 @@
   }
 
   &__arrow {
-    margin-right: 380px;
+    width: 85%;
     position: absolute;
   }
 
   &__logo {
     width: 12rem;
-  }
-
-  &__background {
-    background-position: center;
-    background-size: cover;
-    height: 250px;
-    &--image {
-      width: 100%;
-    }
   }
 
   &--row {

@@ -1,6 +1,23 @@
 .heart {
-  color: $colour-dark-grey;
+  // width: 200px;
   cursor: pointer;
-  //   &--filled {
-  //   }
+  // fill: transparent;
+  // stroke-width: 0.5;
+  // stroke: $colour-black;
+  // stroke-dasharray: 500;
+  // stroke-dashoffset: 100;
+  // &:hover {
+  //   // background-color: linear-gradient($colour-primary, $colour-secondary);
+  //   // fill: $colour-gradient;
+  //   // animation: animate-heart 1500ms linear forwards;
+  // }
 }
+
+// @keyframes animate-heart {
+//   from {
+//     fill: transparent;
+//   }
+//   to {
+//     fill: $colour-secondary;
+//   }
+// }
