@@ -120,6 +120,9 @@
     flex-direction: column;
     justify-content: center;
     text-align: start;
+    &--spaced {
+      padding: 0.5rem 1rem;
+    }
   }
 
   &__row {
@@ -130,14 +133,24 @@
     font-size: 1rem;
     display: flex;
     color: $colour-black;
+    overflow: hidden;
     @include boxing-shadow;
-    &--spaced {
-      padding: 15px;
-      justify-content: space-between;
-    }
+
     &--paddy {
       margin: 15px;
       padding: 25px 30px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+    &:hover + .card__animation {
+      transform: scaleX(1);
+    }
+    &:hover + .card__check--roll {
+      animation-play-state: running;
     }
   }
 
@@ -160,7 +173,30 @@
   }
 
   &__price {
-    padding-top: 20px;
+    padding: 0.5rem 1.5rem;
+    margin-left: auto;
+    align-self: flex-end;
+  }
+
+  &__animation {
+    overflow: hidden;
+    background-color: $colour-tertiary;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    transform: scaleX(0);
+    transition: transform 400ms;
+  }
+
+  &__check {
+    color: $colour-tertiary;
+    padding: 0.2em;
+    border-radius: 50%;
+    background-color: white;
+    align-self: center;
+    &--roll {
+      animation: roll-in-right 0.6s ease-out both paused;
+    }
   }
 }
 
@@ -188,7 +224,6 @@
 
   &__frame {
     display: flex;
-    justify-content: center;
     height: 200px;
   }
 
@@ -202,10 +237,17 @@
     border-radius: 15px 15px 0 0;
     width: 100%;
     object-fit: cover;
+    z-index: 0;
     &--new {
-      content: "nouveau";
-      color: red;
-      // voir vidéos Teams
+      color: darken($colour-tertiary, 40%);
+      background-color: $colour-tertiary;
+      position: relative;
+      right: 6.2rem;
+      top: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      z-index: 1;
+      height: fit-content;
+      border-radius: 5%;
     }
   }
 
@@ -218,6 +260,7 @@
   }
 
   &__heart {
+    font-size: 1.4em;
     margin: 20px 20px 0 0;
     &--fade {
       opacity: 0;
@@ -300,12 +343,13 @@
   }
 }
 
-@keyframes progress-bar {
-  from {
-    transform: scaleX(0);
+@keyframes roll-in-right {
+  0% {
+    transform: translateX(800px) rotate(540deg);
+    opacity: 0;
   }
-  to {
-    transform: scaleX(1);
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
   }
 }
-// regarder Slack OC + discord pour SVG coeur
