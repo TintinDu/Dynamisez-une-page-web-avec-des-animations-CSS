@@ -50,18 +50,11 @@
     margin: 0 10px;
   }
 
-  // &__item {
-  //   margin: 5px;
-  // }
-
   &__text {
     color: $colour-dark-grey;
     font-weight: 100;
     margin: 10px 10px 30px;
   }
-
-  // &__btn {
-  // }
 }
 
 .functioning {
@@ -149,9 +142,9 @@
     &:hover + .card__animation {
       transform: scaleX(1);
     }
-    &:hover + .card__check--roll {
-      animation-play-state: running;
-    }
+    // &:hover + .card__check--roll {
+    //   animation-play-state: running;
+    // }
   }
 
   &__icon {
@@ -185,6 +178,7 @@
     display: flex;
     justify-content: center;
     transform: scaleX(0);
+    transform-origin: 100% 0%;
     transition: transform 400ms;
   }
 
@@ -195,7 +189,7 @@
     background-color: white;
     align-self: center;
     &--roll {
-      animation: roll-in-right 0.6s ease-out both paused;
+      animation: roll-in-right 5s ease-out both running;
     }
   }
 }
@@ -376,11 +370,12 @@
 
 @keyframes roll-in-right {
   0% {
-    transform: translateX(800px) rotate(540deg);
-    opacity: 0;
+    transform: translateX(200px) rotate(540deg);
+  }
+  50% {
+    transform: translateX(800px) rotate(940deg);
   }
   100% {
     transform: translateX(0) rotate(0deg);
-    opacity: 1;
   }
 }
