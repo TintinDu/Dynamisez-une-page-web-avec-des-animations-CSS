@@ -1,5 +1,4 @@
 .wrapper {
-  display: flex;
   width: 100vw;
 }
 
@@ -7,37 +6,30 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background-color: white;
   z-index: 2;
+  opacity: 0;
+  animation: loading-screen forwards;
+  animation-duration: 3000ms;
 }
 
 .loader {
-  // margin: 1em 0;
-  opacity: 1;
-  // passer opacité à 0 avec transform / transition
   display: flex;
-  justify-content: space-evenly;
-
-  &--1 {
-    margin-top: 40vh;
-  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   &__spinner {
-    height: $size * 1.5;
-    width: $size * 1.5;
+    height: $size;
+    width: $size;
+    margin: 0 0.2em;
     background: linear-gradient($colour-primary, $colour-secondary);
     border-radius: 50%;
-    animation: balls $anim-duration backwards infinite ease-in-out alternate
-      running;
+    animation: loading-balls $anim-duration backwards infinite ease-in-out
+      alternate running;
     @for $i from 1 through $num-balls {
       &--#{$i} {
         animation-delay: $anim-delay * $i;
-      }
-      &--#{$i}-inv {
-        animation-delay: $anim-delay * $i + random(100) * 15ms;
-        animation-direction: alternate-reverse;
-        animation-fill-mode: forwards;
-        background: linear-gradient($colour-secondary, $colour-primary);
         &:hover {
           animation-play-state: paused;
         }
@@ -46,17 +38,38 @@
   }
 }
 
-.under {
+.app-content {
+  opacity: 0;
   z-index: 1;
-  margin-left: -200%;
+  width: 100%;
+  animation: loaded-screen forwards;
+  animation-delay: 3000ms;
 }
 
-@keyframes balls {
+@keyframes loading-balls {
   0% {
     transform: scale(0.5, 0.5);
   }
 
   100% {
     transform: scale(1, 1);
+  }
+}
+
+@keyframes loading-screen {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loaded-screen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

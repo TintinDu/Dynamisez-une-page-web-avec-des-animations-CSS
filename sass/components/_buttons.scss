@@ -1,5 +1,9 @@
 .btn {
   @include btn;
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 0px 2px 7px 3px #bab5b5;
+  }
 }
 
 .btn-primary {
@@ -9,8 +13,4 @@
   font-size: 1rem;
   border: transparent;
   @include boxing-shadow;
-}
-
-.btn:hover {
-  opacity: 0.8;
 }
