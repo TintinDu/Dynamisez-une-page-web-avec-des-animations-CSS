@@ -108,6 +108,8 @@
   }
 
   &__column {
+    display: flex;
+    overflow: hidden;
     flex-direction: column;
     justify-content: center;
     text-align: start;
@@ -150,6 +152,7 @@
 
   &__container {
     display: flex;
+    overflow: hidden;
     flex: 1;
     cursor: pointer;
   }
