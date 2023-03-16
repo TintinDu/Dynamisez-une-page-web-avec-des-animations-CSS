@@ -8,8 +8,9 @@
 
   &__background {
     &--image {
-      height: 33%;
+      height: 200px;
       width: 100%;
+      object-fit: cover;
     }
   }
 }
