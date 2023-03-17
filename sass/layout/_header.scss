@@ -26,3 +26,15 @@
     justify-content: center;
   }
 }
+
+@media (min-width: 1024px) {
+  .header {
+    align-items: flex-start;
+    &--row {
+      margin-left: 1em;
+    }
+    &__arrow {
+      display: none;
+    }
+  }
+}
