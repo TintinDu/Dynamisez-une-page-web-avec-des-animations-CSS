@@ -255,6 +255,10 @@
       z-index: 1;
       height: fit-content;
       border-radius: 5%;
+      &:hover {
+        color: lighten($colour-tertiary, 20%);
+        background-color: darken($colour-tertiary, 20%);
+      }
     }
   }
 
